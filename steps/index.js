@@ -17,6 +17,22 @@
 //       '### '
 //       '####'
 
-function steps(n) {}
+function steps(n) {
+    let pounds=1;
+    let steps=n-1;
+    while(pounds<=n){
+        console.log(generateCharacter('#',pounds)+generateCharacter(' ',steps));
+        pounds++;
+        steps--;
+    }
+}
+
+function generateCharacter(char, times){
+    let result=""
+    for(let i=0;i<times;i++){
+        result+=char
+    }
+    return result;
+}
 
 module.exports = steps;
